@@ -3,7 +3,7 @@ import TaskInput from "./TaskInput/TaskInput.vue";
 import TaskSection from "./TaskSection/TaskSection.vue";
 import { useTask } from "@/composables/useTask";
 
-const { tasks, removeTask, donetasks } = useTask();
+const { tasks, donetasks } = useTask();
 </script>
 
 <template>
@@ -12,9 +12,9 @@ const { tasks, removeTask, donetasks } = useTask();
   >
     <TaskInput />
 
-    <div class="w-full">
-      <TaskSection :tasks="tasks" :removeTask="removeTask" title="To-Do" />
-      <TaskSection :tasks="donetasks" :removeTask="removeTask" title="Done" />
+    <div class="w-full overflow-auto pr-10">
+      <TaskSection :tasks="tasks" title="To-Do" />
+      <TaskSection :tasks="donetasks" title="Done" isDoneList />
     </div>
   </div>
 </template>
