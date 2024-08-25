@@ -23,3 +23,23 @@ Siga os passos abaixo para clonar e rodar o projeto localmente:
 
    ```bash
    git clone https://github.com/dev-vinii/todo-app.git
+
+2. Navegue até o diretório do projeto:
+
+    ```bash
+    cd todo-app
+
+3. Instale as dependências:
+
+   ```bash
+   pnpm i
+
+4. Inicie o servidor de desenvolvimento:
+
+   ```bash
+   pnpm dev
+
+5. Abra o navegador e acesse:
+
+   ```bash
+   http://localhost:3000
