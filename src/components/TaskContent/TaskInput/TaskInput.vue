@@ -23,7 +23,12 @@ const { addTasks } = useTask();
     />
     <div
       class="h-full cursor-pointer rounded-lg bg-white p-1 transition duration-200 hover:opacity-90"
-      @click="addTasks(taskInput)"
+      @click="
+        () => {
+          addTasks(taskInput);
+          taskInput = '';
+        }
+      "
     >
       <Plus :size="32" :stroke-width="2" />
     </div>
