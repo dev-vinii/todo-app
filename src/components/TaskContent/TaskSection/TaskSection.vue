@@ -4,10 +4,10 @@ import { Disclosure, DisclosureButton, DisclosurePanel } from "@headlessui/vue";
 import { ChevronUp } from "lucide-vue-next";
 import TaskList from "../TaskList/TaskList.vue";
 
-const props = defineProps<{
+const { title, tasks, isDoneList } = defineProps<{
   title: string;
   tasks: string[];
-  removeTask: (index: number) => void;
+  isDoneList?: boolean;
 }>();
 </script>
 
@@ -19,8 +19,8 @@ const props = defineProps<{
         <ChevronUp />
       </span>
     </DisclosureButton>
-    <DisclosurePanel class="w-full">
-      <TaskList :tasks="props.tasks" :removeTask="props.removeTask" />
+    <DisclosurePanel class="flex w-full flex-col gap-2">
+      <TaskList :tasks="tasks" :isDoneList="isDoneList" />
     </DisclosurePanel>
   </Disclosure>
 </template>
