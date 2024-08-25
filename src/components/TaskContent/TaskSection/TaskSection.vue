@@ -19,7 +19,7 @@ const { title, tasks, isDoneList } = defineProps<{
         <ChevronUp />
       </span>
     </DisclosureButton>
-    <DisclosurePanel class="flex w-full flex-col gap-2">
+    <DisclosurePanel class="animate-slide-down flex w-full flex-col gap-2">
       <TaskList :tasks="tasks" :isDoneList="isDoneList" />
     </DisclosurePanel>
   </Disclosure>
