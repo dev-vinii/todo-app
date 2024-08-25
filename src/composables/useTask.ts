@@ -21,11 +21,16 @@ export function useTask() {
     tasks.value = tasks.value.filter((_, i) => i !== index);
   };
 
+  const removeDoneTask = (index: number) => {
+    donetasks.value = donetasks.value.filter((_, i) => i !== index);
+  };
+
   return {
     tasks,
     donetasks,
     addTasks,
     removeTask,
     addDoneTask,
+    removeDoneTask,
   };
 }
